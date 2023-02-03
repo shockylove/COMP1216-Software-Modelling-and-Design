@@ -1,0 +1,11 @@
+context UserSystem
+sets
+	USERS
+	PASSWORD
+constants
+	root
+	default_password
+axioms
+	@def1: root ∈ USERS
+	@def2: default_password ∈ PASSWORD
+end

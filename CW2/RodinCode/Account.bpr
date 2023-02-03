@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+    <org.eventb.core.prProof name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="USERS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(USERS))∩(∅ ⦂ ℙ(USERS))=(∅ ⦂ ℙ(USERS))"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="USERS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(USERS))∩(∅ ⦂ ℙ(USERS))=(∅ ⦂ ℙ(USERS))"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="Login/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5" org.eventb.core.prSets="PASSWORD,USERS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p8"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="p4,p1,p3,p2,p6">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="account" org.eventb.core.type="ℙ(USERS×PASSWORD)"/>
+        <org.eventb.core.prIdent name="in" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prIdent name="out" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prIdent name="u" org.eventb.core.type="USERS"/>
+        <org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="users=in∪out"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="(in∪{u})∩out⊆{u}"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(in∪{u})∩(out ∖ {u})=(∅ ⦂ ℙ(USERS))"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="u∈users"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬u∈in"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="users⊆USERS"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="in∩out=(∅ ⦂ ℙ(USERS))"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="account∈users → PASSWORD"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="u∉in"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="Login/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4" org.eventb.core.prSets="USERS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p7"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p8"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p1,p3,p2,p5">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="in" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prIdent name="out" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prIdent name="u" org.eventb.core.type="USERS"/>
+        <org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="users=in∪out"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="(in∪{u})∩out⊆{u}"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="password⊆PASSWORD">
+            <org.eventb.core.prIdent name="PASSWORD" org.eventb.core.type="ℙ(PASSWORD)"/>
+            <org.eventb.core.prIdent name="password" org.eventb.core.type="ℙ(PASSWORD)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(in∪{u})∩(out ∖ {u})=(∅ ⦂ ℙ(USERS))"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="u∈users"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬u∈in"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="users⊆USERS"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="in∩out=(∅ ⦂ ℙ(USERS))"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="u∉in"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="Logout/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4" org.eventb.core.prSets="PASSWORD,USERS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p6"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="p4,p1,p3,p2">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="account" org.eventb.core.type="ℙ(USERS×PASSWORD)"/>
+        <org.eventb.core.prIdent name="in" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prIdent name="out" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prIdent name="s" org.eventb.core.type="USERS"/>
+        <org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="users=in∪out"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="s∈out"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="users⊆USERS"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="in∩out=(∅ ⦂ ℙ(USERS))"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="in∩(out∪{s})⊆{s}"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(in ∖ {s})∩(out∪{s})=(∅ ⦂ ℙ(USERS))"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="account∈users → PASSWORD"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="Logout/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4" org.eventb.core.prSets="PASSWORD,USERS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p6"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="p4,p1,p3,p2">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="account" org.eventb.core.type="ℙ(USERS×PASSWORD)"/>
+        <org.eventb.core.prIdent name="in" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prIdent name="out" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prIdent name="s" org.eventb.core.type="USERS"/>
+        <org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="users=in∪out"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="s∈out"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="users⊆USERS"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="in∩out=(∅ ⦂ ℙ(USERS))"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="in∩(out∪{s})⊆{s}"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(in ∖ {s})∩(out∪{s})=(∅ ⦂ ℙ(USERS))"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="account∈users → PASSWORD"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="USERS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(USERS))=(∅ ⦂ ℙ(USERS))∪(∅ ⦂ ℙ(USERS))"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="ChangPassword/grid3/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="PASSWORD,USERS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p3"/>
+                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="p1">
+                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p2">
+                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p2" org.eventb.core.prHyps="p2"/>
+                            </org.eventb.core.prAnte>
+                            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+                            <org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                    <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p6">
+                        <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p1"/>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="account" org.eventb.core.type="ℙ(USERS×PASSWORD)"/>
+        <org.eventb.core.prIdent name="password" org.eventb.core.type="ℙ(PASSWORD)"/>
+        <org.eventb.core.prIdent name="u" org.eventb.core.type="USERS"/>
+        <org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="account∈users → password"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="password⊆PASSWORD"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="u∈dom(account)"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="u∈users"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="users⊆USERS"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="u∈dom(account)∧account∈USERS ⇸ PASSWORD"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="account∈USERS ⇸ PASSWORD"/>
+        <org.eventb.core.prExpr name="e0" org.eventb.core.expression="users"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="ChangPassword/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7" org.eventb.core.prSets="PASSWORD,USERS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p10"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p5,p7,p3,p6,p8">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="account" org.eventb.core.type="ℙ(USERS×PASSWORD)"/>
+        <org.eventb.core.prIdent name="in" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prIdent name="out" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prIdent name="p" org.eventb.core.type="PASSWORD"/>
+        <org.eventb.core.prIdent name="password" org.eventb.core.type="ℙ(PASSWORD)"/>
+        <org.eventb.core.prIdent name="u" org.eventb.core.type="USERS"/>
+        <org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="account∈users → password"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="users=in∪out"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="password⊆PASSWORD"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="u∈dom(account)"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="account(u)≠p"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="account{u ↦ p}∈users → password"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="users⊆USERS"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="in∩out=(∅ ⦂ ℙ(USERS))"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="account∈USERS ⇸ PASSWORD"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬account(u)=p"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="p∈password"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="ChangePassword/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="PASSWORD,USERS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p3"/>
+                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="p2">
+                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="p1"/>
+                            </org.eventb.core.prAnte>
+                            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+                            <org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                    <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p6">
+                        <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p2"/>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="account" org.eventb.core.type="ℙ(USERS×PASSWORD)"/>
+        <org.eventb.core.prIdent name="u" org.eventb.core.type="USERS"/>
+        <org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="p∈PASSWORD">
+            <org.eventb.core.prIdent name="p" org.eventb.core.type="PASSWORD"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="u∈dom(account)"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="u∈users"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="users⊆USERS"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="u∈dom(account)∧account∈USERS ⇸ PASSWORD"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="account∈USERS ⇸ PASSWORD"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="account∈users → PASSWORD"/>
+        <org.eventb.core.prExpr name="e0" org.eventb.core.expression="users"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="ChangePassword/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5" org.eventb.core.prSets="PASSWORD,USERS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p7"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p8"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p1,p4,p2,p6">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="account" org.eventb.core.type="ℙ(USERS×PASSWORD)"/>
+        <org.eventb.core.prIdent name="in" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prIdent name="out" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prIdent name="p" org.eventb.core.type="PASSWORD"/>
+        <org.eventb.core.prIdent name="u" org.eventb.core.type="USERS"/>
+        <org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="p∈PASSWORD"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="users=in∪out"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬p∈ran(account)"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="account{u ↦ p}∈users → PASSWORD"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="u∈users"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="p∉ran(account)"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="users⊆USERS"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="in∩out=(∅ ⦂ ℙ(USERS))"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="account∈users → PASSWORD"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="PASSWORD,USERS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(USERS×PASSWORD))∈(∅ ⦂ ℙ(USERS)) → PASSWORD"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="Login/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5" org.eventb.core.prSets="PASSWORD,USERS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p8"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with users=in∪out" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="p1">
+                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+                                <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p2" org.eventb.core.prInfHyps="p9"/>
+                                <org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p2"/>
+                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p10" org.eventb.core.prHyps="p4,p1,p3,p2,p6,p9">
+                                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                                </org.eventb.core.prRule>
+                            </org.eventb.core.prAnte>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="account" org.eventb.core.type="ℙ(USERS×PASSWORD)"/>
+        <org.eventb.core.prIdent name="in" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prIdent name="out" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prIdent name="u" org.eventb.core.type="USERS"/>
+        <org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="users=in∪out"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="u∈users"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬u∈in"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="users=(in∪{u})∪(out ∖ {u})"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="users⊆USERS"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="in∩out=(∅ ⦂ ℙ(USERS))"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="users=in∪{u}∪(out ∖ {u})"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="account∈users → PASSWORD"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="u∈in∪out"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="in∪out=in∪{u}∪(out ∖ {u})"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="u∉in"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="Logout/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4" org.eventb.core.prSets="PASSWORD,USERS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p6"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with users=in∪out" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="p1">
+                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="p4,p1,p3,p2">
+                                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                                </org.eventb.core.prRule>
+                            </org.eventb.core.prAnte>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="account" org.eventb.core.type="ℙ(USERS×PASSWORD)"/>
+        <org.eventb.core.prIdent name="in" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prIdent name="out" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prIdent name="s" org.eventb.core.type="USERS"/>
+        <org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="users=in∪out"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="s∈out"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="in∪out=(in ∖ {s})∪out∪{s}"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="users=(in ∖ {s})∪(out∪{s})"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="users⊆USERS"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="in∩out=(∅ ⦂ ℙ(USERS))"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="users=(in ∖ {s})∪out∪{s}"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="account∈users → PASSWORD"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="ChangePassword/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7" org.eventb.core.prSets="PASSWORD,USERS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p10"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p7,p1,p5,p4,p2,p6,p8">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="account" org.eventb.core.type="ℙ(USERS×PASSWORD)"/>
+        <org.eventb.core.prIdent name="in" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prIdent name="out" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prIdent name="p" org.eventb.core.type="PASSWORD"/>
+        <org.eventb.core.prIdent name="u" org.eventb.core.type="USERS"/>
+        <org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="p∈PASSWORD"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="users=in∪out"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="account{u ↦ p}∈users → PASSWORD"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="u∈dom(account)"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="account(u)≠p"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="u∈users"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="users⊆USERS"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="in∩out=(∅ ⦂ ℙ(USERS))"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="account∈USERS ⇸ PASSWORD"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬account(u)=p"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="account∈users → PASSWORD"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="Login/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="PASSWORD,USERS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p5"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6">
+                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p2">
+                                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+                                        <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="p1"/>
+                                    </org.eventb.core.prAnte>
+                                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+                                    <org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+                                </org.eventb.core.prRule>
+                            </org.eventb.core.prAnte>
+                            <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p7">
+                                <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="p2"/>
+                            </org.eventb.core.prAnte>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="account" org.eventb.core.type="ℙ(USERS×PASSWORD)"/>
+        <org.eventb.core.prIdent name="u" org.eventb.core.type="USERS"/>
+        <org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="u∈dom(account)"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="u∈users"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬u∈in">
+            <org.eventb.core.prIdent name="in" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="users⊆USERS"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="u∈dom(account)∧account∈USERS ⇸ PASSWORD"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="account∈USERS ⇸ PASSWORD"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="account∈users → PASSWORD"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="u∉in">
+            <org.eventb.core.prIdent name="in" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prExpr name="e0" org.eventb.core.expression="users"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="Login/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="PASSWORD,USERS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p5"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p6"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="p2">
+                                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+                                        <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="p1"/>
+                                    </org.eventb.core.prAnte>
+                                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+                                    <org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+                                </org.eventb.core.prRule>
+                            </org.eventb.core.prAnte>
+                            <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p8">
+                                <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps="p2"/>
+                            </org.eventb.core.prAnte>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="account" org.eventb.core.type="ℙ(USERS×PASSWORD)"/>
+        <org.eventb.core.prIdent name="u" org.eventb.core.type="USERS"/>
+        <org.eventb.core.prIdent name="users" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="p∈PASSWORD">
+            <org.eventb.core.prIdent name="p" org.eventb.core.type="PASSWORD"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="u∈dom(account)"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="u∈users"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬u∈in">
+            <org.eventb.core.prIdent name="in" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="users⊆USERS"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="u∈dom(account)∧account∈USERS ⇸ PASSWORD"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="account∈USERS ⇸ PASSWORD"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="account∈users → PASSWORD"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="u∉in">
+            <org.eventb.core.prIdent name="in" org.eventb.core.type="ℙ(USERS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prExpr name="e0" org.eventb.core.expression="users"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+    </org.eventb.core.prProof>
+</org.eventb.core.prFile>

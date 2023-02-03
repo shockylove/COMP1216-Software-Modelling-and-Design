@@ -1,0 +1,111 @@
+machine Users
+sees UserSystem
+variables 
+	users in out account
+	adminstrators
+	staff
+	citizens
+	
+invariants
+	@inv1: users ⊆ USERS
+	@inv2: adminstrators ⊆ users
+	@inv3: staff ⊆ users
+	@inv4: citizens ⊆ users
+	@inv5: partition(users,adminstrators,staff,citizens)
+	@inv6: partition(users, in ,out)
+	// Each user has exactly 1 PASSWORD
+	//A PASSWORD may be used by many users
+	@inv7: account ∈ users → PASSWORD // total fucntion
+	
+events
+	event INITIALISATION
+	then
+		@act1: users ≔ {root} 	// root administrator
+		@act2: adminstrators ≔ {root}
+		@act3: out ≔ {root}
+		@act4: account ≔ {root ↦ default_password}
+		@act5: staff,citizens,in ≔  ∅,∅,∅
+	end
+	
+	/*
+	 * Let registered users to login in usin password
+	 */
+	event Login
+	any u p where
+		@grd1: u ∈ users
+		@grd2: u ∉ in
+		@grd3: p ∈ PASSWORD
+		@grd4: account(u) = p	// user and PASSWORD must match, then could login
+	then
+		@act1: in ≔ in ∪ {u}
+		@act2: out ≔ out ∖{u}
+	end
+	
+	/* 
+	 * Let registered users to login out
+	 * */
+	event Logout
+	any s where
+		@grd1: s ∈ in
+	then
+		@act1: in ≔ in ∖ {s}
+		@act2: out ≔ out ∪ {s}
+	end
+	
+	/*
+	 * Users could change their password
+	 */
+	event ChangePassword
+	any p u  where
+		@grd1: u ∈ users
+		@grd2: p ∈ PASSWORD
+		@grd3: account(u) ≠ p	// New PASSWORD is not the  current PASSWORD
+	then
+		@act1: account(u) ≔ p
+	end
+	
+	/*
+	 * Citizen could register by their own
+	 */
+	event RegisterCitizen
+	any c p where
+		@grd1: c ∉ users
+		@grd2: p ∈ PASSWORD
+	then
+		@act1: users ≔ users ∪ {c}
+		@act2: citizens ≔  citizens ∪ {c}
+		@act3: out ≔ out ∪ {c}
+		@act4: account(c) ≔ p
+	end
+	
+	/*
+	 * Staff must be registered by a administrator
+	 */
+	event RegisterStaff
+	any a1 s  p where
+		@grd1: a1 ∈ adminstrators ∩ in
+		@grd4: s ∈ (USERS ∖ users) 
+		@grd5: p ∈ PASSWORD
+	then
+		@act1: users ≔ users ∪ {s}
+		@act2: staff ≔ staff ∪ {s}
+		@act3: account(s) ≔ p
+		@act4: out ≔ out ∪ {s}
+	end
+	
+	/* 
+	 * administrator must be registered by another administrator
+	 * */
+	event RegisterAd
+	any a1 a2 p where
+		@grd1: a1 ∈ adminstrators ∩ in
+		@grd2: a2 ∈ (USERS ∖ users) 
+		@grd3: p ∈ PASSWORD
+	then
+		@act1: users ≔ users ∪ {a2}
+		@act2: adminstrators ≔ adminstrators ∪ {a2}
+		@act3: account(a2) ≔ p
+		@act4: out ≔ out ∪ {a2}
+	end
+
+end

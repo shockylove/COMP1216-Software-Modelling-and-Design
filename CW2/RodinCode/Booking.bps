@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+    <org.eventb.core.psStatus name="INITIALISATION/inv32/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv33/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv34/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv35/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="NewBooking/grd7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="NewBooking/grd8/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="NewBooking/inv32/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CitizenAcceptBooking/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CitizenAcceptBooking/inv35/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CitizenRejectBooking/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CitizenRejectBooking/grd10/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CitizenRejectBooking/inv33/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CitizenTerminateABooking/inv32/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CitizenTerminateABooking/inv35/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ViewCurrentBooking/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="UpdateAppointment/inv33/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="UpdateAppointment/inv34/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AddCentre/inv33/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AddCentre/inv35/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="RegisterCitizen/inv32/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="RegisterCitizen/inv35/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>

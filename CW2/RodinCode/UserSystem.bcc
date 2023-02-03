@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xcontext.base">
+    <org.eventb.core.scAxiom name="'" org.eventb.core.label="def1" org.eventb.core.predicate="root∈USERS" org.eventb.core.source="/Coursework2/UserSystem.buc|org.eventb.core.contextFile#UserSystem|org.eventb.core.axiom#_raaOgNI7EeyM6bBEKm0qeA" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name="(" org.eventb.core.label="def2" org.eventb.core.predicate="default_password∈PASSWORD" org.eventb.core.source="/Coursework2/UserSystem.buc|org.eventb.core.contextFile#UserSystem|org.eventb.core.axiom#_raaOgdI7EeyM6bBEKm0qeA" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scConstant name="root" org.eventb.core.source="/Coursework2/UserSystem.buc|org.eventb.core.contextFile#UserSystem|org.eventb.core.constant#_raYZUNI7EeyM6bBEKm0qeA" org.eventb.core.type="USERS"/>
+    <org.eventb.core.scCarrierSet name="USERS" org.eventb.core.source="/Coursework2/UserSystem.buc|org.eventb.core.contextFile#UserSystem|org.eventb.core.carrierSet#_raV9ENI7EeyM6bBEKm0qeA" org.eventb.core.type="ℙ(USERS)"/>
+    <org.eventb.core.scConstant name="default_password" org.eventb.core.source="/Coursework2/UserSystem.buc|org.eventb.core.contextFile#UserSystem|org.eventb.core.constant#_raZncNI7EeyM6bBEKm0qeA" org.eventb.core.type="PASSWORD"/>
+    <org.eventb.core.scCarrierSet name="PASSWORD" org.eventb.core.source="/Coursework2/UserSystem.buc|org.eventb.core.contextFile#UserSystem|org.eventb.core.carrierSet#_raXLMNI7EeyM6bBEKm0qeA" org.eventb.core.type="ℙ(PASSWORD)"/>
+</org.eventb.core.scContextFile>

@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="10">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="BRAND" org.eventb.core.type="ℙ(BRAND)"/>
+        <org.eventb.core.poIdentifier name="VACCINES" org.eventb.core.type="ℙ(VACCINES)"/>
+        <org.eventb.core.poIdentifier name="NAME" org.eventb.core.type="ℙ(NAME)"/>
+        <org.eventb.core.poIdentifier name="CENTRES" org.eventb.core.type="ℙ(CENTRES)"/>
+        <org.eventb.core.poIdentifier name="VACCINES_BATCH" org.eventb.core.type="ℙ(VACCINES_BATCH)"/>
+        <org.eventb.core.poIdentifier name="NHS" org.eventb.core.type="ℙ(NHS)"/>
+        <org.eventb.core.poIdentifier name="BOOKINGLIST" org.eventb.core.type="ℙ(BOOKINGLIST)"/>
+        <org.eventb.core.poIdentifier name="USERS" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="PASSWORD" org.eventb.core.type="ℙ(PASSWORD)"/>
+        <org.eventb.core.poIdentifier name="root" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="default_password" org.eventb.core.type="PASSWORD"/>
+        <org.eventb.core.poPredicate name="default_passwore" org.eventb.core.predicate="root∈USERS" org.eventb.core.source="/Coursework2/UserSystem.buc|org.eventb.core.contextFile#UserSystem|org.eventb.core.axiom#_raaOgNI7EeyM6bBEKm0qeA"/>
+        <org.eventb.core.poPredicate name="default_passworf" org.eventb.core.predicate="default_password∈PASSWORD" org.eventb.core.source="/Coursework2/UserSystem.buc|org.eventb.core.contextFile#UserSystem|org.eventb.core.axiom#_raaOgdI7EeyM6bBEKm0qeA"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poIdentifier name="citizens" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="check" org.eventb.core.type="ℙ(USERS×NHS)"/>
+        <org.eventb.core.poIdentifier name="users" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="vaccines" org.eventb.core.type="ℙ(VACCINES)"/>
+        <org.eventb.core.poIdentifier name="lastVaccine" org.eventb.core.type="ℙ(USERS×ℤ)"/>
+        <org.eventb.core.poIdentifier name="nhs" org.eventb.core.type="ℙ(NHS)"/>
+        <org.eventb.core.poIdentifier name="centres" org.eventb.core.type="ℙ(CENTRES)"/>
+        <org.eventb.core.poIdentifier name="bookingtime" org.eventb.core.type="ℙ(BOOKINGLIST×ℤ)"/>
+        <org.eventb.core.poIdentifier name="batch" org.eventb.core.type="ℙ(VACCINES_BATCH×VACCINES)"/>
+        <org.eventb.core.poIdentifier name="name" org.eventb.core.type="ℙ(USERS×NAME)"/>
+        <org.eventb.core.poIdentifier name="book" org.eventb.core.type="ℙ(BOOKINGLIST×USERS)"/>
+        <org.eventb.core.poIdentifier name="booking" org.eventb.core.type="ℙ(BOOKINGLIST)"/>
+        <org.eventb.core.poIdentifier name="appointment" org.eventb.core.type="ℙ(CENTRES×BOOKINGLIST)"/>
+        <org.eventb.core.poIdentifier name="account" org.eventb.core.type="ℙ(USERS×PASSWORD)"/>
+        <org.eventb.core.poIdentifier name="staff" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="in" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="belongs" org.eventb.core.type="ℙ(CENTRES×VACCINES_BATCH)"/>
+        <org.eventb.core.poIdentifier name="adminstrators" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="brand" org.eventb.core.type="ℙ(VACCINES×BRAND)"/>
+        <org.eventb.core.poIdentifier name="accept" org.eventb.core.type="ℙ(USERS×CENTRES)"/>
+        <org.eventb.core.poIdentifier name="certificates" org.eventb.core.type="ℙ(USERS×ℤ)"/>
+        <org.eventb.core.poIdentifier name="recording" org.eventb.core.type="ℙ(USERS×VACCINES_BATCH)"/>
+        <org.eventb.core.poIdentifier name="out" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="date" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poPredicate name="adminstratort" org.eventb.core.predicate="users⊆USERS" org.eventb.core.source="/Coursework2/Users.bum|org.eventb.core.machineFile#Users|org.eventb.core.invariant#_7nbaQNI8EeyM6bBEKm0qeA"/>
+        <org.eventb.core.poPredicate name="adminstratoru" org.eventb.core.predicate="adminstrators⊆users" org.eventb.core.source="/Coursework2/Users.bum|org.eventb.core.machineFile#Users|org.eventb.core.invariant#_7ncBUNI8EeyM6bBEKm0qeA"/>
+        <org.eventb.core.poPredicate name="adminstratorv" org.eventb.core.predicate="staff⊆users" org.eventb.core.source="/Coursework2/Users.bum|org.eventb.core.machineFile#Users|org.eventb.core.invariant#_7ncBUdI8EeyM6bBEKm0qeA"/>
+        <org.eventb.core.poPredicate name="adminstratorw" org.eventb.core.predicate="citizens⊆users" org.eventb.core.source="/Coursework2/Users.bum|org.eventb.core.machineFile#Users|org.eventb.core.invariant#_7ncBUtI8EeyM6bBEKm0qeA"/>
+        <org.eventb.core.poPredicate name="adminstratorx" org.eventb.core.predicate="partition(users,adminstrators,staff,citizens)" org.eventb.core.source="/Coursework2/Users.bum|org.eventb.core.machineFile#Users|org.eventb.core.invariant#_7ncBU9I8EeyM6bBEKm0qeA"/>
+        <org.eventb.core.poPredicate name="adminstratory" org.eventb.core.predicate="partition(users,in,out)" org.eventb.core.source="/Coursework2/Users.bum|org.eventb.core.machineFile#Users|org.eventb.core.invariant#_7ncoYNI8EeyM6bBEKm0qeA"/>
+        <org.eventb.core.poPredicate name="adminstratorz" org.eventb.core.predicate="account∈users → PASSWORD" org.eventb.core.source="/Coursework2/Users.bum|org.eventb.core.machineFile#Users|org.eventb.core.invariant#_7ncoYdI8EeyM6bBEKm0qeA"/>
+        <org.eventb.core.poPredicate name="adminstrator{" org.eventb.core.predicate="date⊆ℕ1" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.invariant#_0bRDotI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="adminstrator|" org.eventb.core.predicate="name∈citizens → NAME" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.invariant#_0bRDo9I-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="adminstrator}" org.eventb.core.predicate="nhs⊆NHS" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.invariant#_0bSRwNI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="adminstrator~" org.eventb.core.predicate="check∈citizens ⤖ nhs" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.invariant#_0bS40NI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="adminstratos'" org.eventb.core.predicate="recording∈citizens ↔ VACCINES_BATCH" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.invariant#_0bS40dI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="adminstratos(" org.eventb.core.predicate="certificates∈citizens → ℤ" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.invariant#_0bS40tI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="adminstratos)" org.eventb.core.predicate="lastVaccine∈citizens ⇸ date" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.invariant#_0bS409I-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="adminstratos*" org.eventb.core.predicate="vaccines⊆VACCINES" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.invariant#_0bS41NI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="adminstratos+" org.eventb.core.predicate="centres⊆CENTRES" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.invariant#_0bTf4NI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="adminstratos," org.eventb.core.predicate="brand∈vaccines → BRAND" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.invariant#_0bTf4dI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="adminstratos-" org.eventb.core.predicate="belongs∈centres ↔ VACCINES_BATCH" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.invariant#_0bTf4tI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="adminstratos." org.eventb.core.predicate="batch∈VACCINES_BATCH ⤀ vaccines" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.invariant#_0bTf49I-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="adminstratos/" org.eventb.core.predicate="∀c⦂USERS·c∈citizens⇒certificates(c)≤3" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.invariant#_0bTf5NI-EeyEye5G0mBYwA"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="INITIALISATION/inv32/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTALLHYPVaccinationSystf("/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(BOOKINGLIST×USERS))∈(∅ ⦂ ℙ(BOOKINGLIST)) → (∅ ⦂ ℙ(USERS))" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuDA9JDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bTf5dI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRv4MNJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuDA9JDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poSequent#INITIALISATION\/inv32\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv33/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTALLHYPVaccinationSystf("/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(CENTRES×BOOKINGLIST))∈(∅ ⦂ ℙ(CENTRES))  (∅ ⦂ ℙ(BOOKINGLIST))" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqENJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bTf5dI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRv4MNJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqENJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poSequent#INITIALISATION\/inv33\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv34/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTALLHYPVaccinationSystf("/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(BOOKINGLIST×ℤ))∈(∅ ⦂ ℙ(BOOKINGLIST)) ↔ ℕ1" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqEdJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bTf5dI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRv4MNJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqEdJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poSequent#INITIALISATION\/inv34\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv35/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTALLHYPVaccinationSystf("/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USERS×CENTRES))∈(∅ ⦂ ℙ(USERS)) → (∅ ⦂ ℙ(CENTRES))" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqEtJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bTf5dI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRv4MNJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqEtJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poSequent#INITIALISATION\/inv35\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTVaccinationSystf(" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="bookingtime'" org.eventb.core.type="ℙ(BOOKINGLIST×ℤ)"/>
+        <org.eventb.core.poIdentifier name="adminstrators'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="account'" org.eventb.core.type="ℙ(USERS×PASSWORD)"/>
+        <org.eventb.core.poIdentifier name="centres'" org.eventb.core.type="ℙ(CENTRES)"/>
+        <org.eventb.core.poIdentifier name="nhs'" org.eventb.core.type="ℙ(NHS)"/>
+        <org.eventb.core.poIdentifier name="name'" org.eventb.core.type="ℙ(USERS×NAME)"/>
+        <org.eventb.core.poIdentifier name="lastVaccine'" org.eventb.core.type="ℙ(USERS×ℤ)"/>
+        <org.eventb.core.poIdentifier name="users'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="book'" org.eventb.core.type="ℙ(BOOKINGLIST×USERS)"/>
+        <org.eventb.core.poIdentifier name="date'" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poIdentifier name="in'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="belongs'" org.eventb.core.type="ℙ(CENTRES×VACCINES_BATCH)"/>
+        <org.eventb.core.poIdentifier name="out'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="appointment'" org.eventb.core.type="ℙ(CENTRES×BOOKINGLIST)"/>
+        <org.eventb.core.poIdentifier name="staff'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="brand'" org.eventb.core.type="ℙ(VACCINES×BRAND)"/>
+        <org.eventb.core.poIdentifier name="booking'" org.eventb.core.type="ℙ(BOOKINGLIST)"/>
+        <org.eventb.core.poIdentifier name="accept'" org.eventb.core.type="ℙ(USERS×CENTRES)"/>
+        <org.eventb.core.poIdentifier name="check'" org.eventb.core.type="ℙ(USERS×NHS)"/>
+        <org.eventb.core.poIdentifier name="certificates'" org.eventb.core.type="ℙ(USERS×ℤ)"/>
+        <org.eventb.core.poIdentifier name="batch'" org.eventb.core.type="ℙ(VACCINES_BATCH×VACCINES)"/>
+        <org.eventb.core.poIdentifier name="citizens'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="vaccines'" org.eventb.core.type="ℙ(VACCINES)"/>
+        <org.eventb.core.poIdentifier name="recording'" org.eventb.core.type="ℙ(USERS×VACCINES_BATCH)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPVaccinationSystf(" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTIDENTVaccinationSystf(" org.eventb.core.poStamp="0"/>
+    <org.eventb.core.poSequent name="NewBooking/grd7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTHYPVaccinationSystf),"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="c1∈dom(certificates)∧certificates∈USERS ⇸ ℤ" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRwfQdJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRxGWNJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRwfQdJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRxGWNJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTHYPVaccinationSystf),"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="NewBooking/grd8/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTHYPVaccinationSystf)-"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="c1∈dom(lastVaccine)∧lastVaccine∈USERS ⇸ ℤ" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRwfQdJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRxtYNJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRwfQdJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRxtYNJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTHYPVaccinationSystf)-"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="NewBooking/inv32/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTALLHYPVaccinationSystf)"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book{b ↦ c1}∈booking → citizens" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuDA9JDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRwfQdJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuDA9JDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poSequent#NewBooking\/inv32\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTVaccinationSystf)" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+        <org.eventb.core.poIdentifier name="b" org.eventb.core.type="BOOKINGLIST"/>
+        <org.eventb.core.poIdentifier name="c1" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="book'" org.eventb.core.type="ℙ(BOOKINGLIST×USERS)"/>
+        <org.eventb.core.poIdentifier name="c2" org.eventb.core.type="CENTRES"/>
+        <org.eventb.core.poIdentifier name="t" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPVaccinationSystf)," org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTIDENTVaccinationSystf)" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c1∈citizens" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRwfQdJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRxGUtJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c2∈centres" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRwfQdJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRxGU9JDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="b∈booking" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRwfQdJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRxGVNJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="t∈ℕ1" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRwfQdJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRxGVdJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="c2 ↦ b∈appointment" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRwfQdJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRxGVtJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="b ↦ t∈bookingtime" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRwfQdJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRxGV9JDEeyk75c4Gf88Kw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPVaccinationSystf)-" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTHYPVaccinationSystf)," org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="certificates(c1)≤3" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRwfQdJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRxGWNJDEeyk75c4Gf88Kw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPVaccinationSystf)" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTHYPVaccinationSystf)-" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="t − lastVaccine(c1)≥28" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRwfQdJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRxtYNJDEeyk75c4Gf88Kw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="CitizenAcceptBooking/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTHYPVaccinationSystf**"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="c1∈dom(accept)∧accept∈USERS ⇸ CENTRES" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRxtYtJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRyUcNJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRxtYtJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRyUcNJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTHYPVaccinationSystf**"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="CitizenAcceptBooking/inv35/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTALLHYPVaccinationSystf*"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="accept{c1 ↦ c2}∈citizens → centres" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqEtJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRxtYtJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqEtJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poSequent#CitizenAcceptBooking\/inv35\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTVaccinationSystf*" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+        <org.eventb.core.poIdentifier name="b" org.eventb.core.type="BOOKINGLIST"/>
+        <org.eventb.core.poIdentifier name="c1" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="c2" org.eventb.core.type="CENTRES"/>
+        <org.eventb.core.poIdentifier name="accept'" org.eventb.core.type="ℙ(USERS×CENTRES)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPVaccinationSystf**" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTIDENTVaccinationSystf*" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="b∈booking" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRxtYtJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRxtZtJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c2∈centres" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRxtYtJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRxtZ9JDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="c1∈citizens" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRxtYtJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRxtaNJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="c2 ↦ b∈appointment" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRxtYtJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRxtadJDEeyk75c4Gf88Kw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPVaccinationSystf*" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTHYPVaccinationSystf**" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="accept(c1)≠c2" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRxtYtJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRyUcNJDEeyk75c4Gf88Kw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="CitizenRejectBooking/grd6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTHYPVaccinationSystf+*"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="c1∈dom(accept)∧accept∈USERS ⇸ CENTRES" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRyUctJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRy7gNJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRyUctJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRy7gNJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTHYPVaccinationSystf+*"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="CitizenRejectBooking/grd10/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTHYPVaccinationSystf+-"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="b∈dom(book)∧book∈BOOKINGLIST ⇸ USERS" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRyUctJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRy7g9JDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRyUctJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRy7g9JDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTHYPVaccinationSystf+-"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="CitizenRejectBooking/inv33/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTALLHYPVaccinationSystf+"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="appointment∪({c3} × {b3})∈centres  booking" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqENJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRyUctJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqENJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poSequent#CitizenRejectBooking\/inv33\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTVaccinationSystf+" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+        <org.eventb.core.poIdentifier name="b" org.eventb.core.type="BOOKINGLIST"/>
+        <org.eventb.core.poIdentifier name="c1" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="appointment'" org.eventb.core.type="ℙ(CENTRES×BOOKINGLIST)"/>
+        <org.eventb.core.poIdentifier name="c2" org.eventb.core.type="CENTRES"/>
+        <org.eventb.core.poIdentifier name="b3" org.eventb.core.type="BOOKINGLIST"/>
+        <org.eventb.core.poIdentifier name="c3" org.eventb.core.type="CENTRES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPVaccinationSystf+*" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTIDENTVaccinationSystf+" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="b∈booking" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRyUctJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRyUeNJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c2∈centres" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRyUctJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRyUedJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="c1∈citizens" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRyUctJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRyUetJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="c2 ↦ b∈appointment" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRyUctJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRyUe9JDEeyk75c4Gf88Kw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPVaccinationSystf+-" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTHYPVaccinationSystf+*" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="accept(c1)≠c2" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRyUctJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRy7gNJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="b3∈dom(bookingtime)" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRyUctJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRy7gdJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="c3 ↦ b3∉appointment" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRyUctJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRy7gtJDEeyk75c4Gf88Kw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPVaccinationSystf+" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTHYPVaccinationSystf+-" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="book(b)=c1" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRyUctJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NRy7g9JDEeyk75c4Gf88Kw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="CitizenTerminateABooking/inv32/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTALLHYPVaccinationSystf,"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book ⩥ {c1}∈booking → citizens" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuDA9JDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRzikdJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuDA9JDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poSequent#CitizenTerminateABooking\/inv32\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="CitizenTerminateABooking/inv35/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTALLHYPVaccinationSystf,"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{c1} ⩤ accept∈citizens → centres" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqEtJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRzikdJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqEtJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poSequent#CitizenTerminateABooking\/inv35\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTVaccinationSystf," org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+        <org.eventb.core.poIdentifier name="b" org.eventb.core.type="BOOKINGLIST"/>
+        <org.eventb.core.poIdentifier name="c1" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="book'" org.eventb.core.type="ℙ(BOOKINGLIST×USERS)"/>
+        <org.eventb.core.poIdentifier name="c2" org.eventb.core.type="CENTRES"/>
+        <org.eventb.core.poIdentifier name="accept'" org.eventb.core.type="ℙ(USERS×CENTRES)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPVaccinationSystf," org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTIDENTVaccinationSystf," org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c1∈citizens" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRzikdJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NR1XwtJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="b ↦ c1∈book" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRzikdJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NR1Xw9JDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="c1 ↦ c2∈accept" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NRzikdJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NR1XxNJDEeyk75c4Gf88Kw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="ViewCurrentBooking/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTHYPVaccinationSystf-("/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="c1∈dom(accept)∧accept∈USERS ⇸ CENTRES" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NR1Xx9JDEeyk75c4Gf88Kw|org.eventb.core.guard#_NR3M8dJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NR1Xx9JDEeyk75c4Gf88Kw|org.eventb.core.guard#_NR3M8dJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTHYPVaccinationSystf-("/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTVaccinationSystf-" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+        <org.eventb.core.poIdentifier name="rs1" org.eventb.core.type="CENTRES"/>
+        <org.eventb.core.poIdentifier name="c1" org.eventb.core.type="USERS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPVaccinationSystf-(" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTIDENTVaccinationSystf-" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c1∈citizens" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NR1Xx9JDEeyk75c4Gf88Kw|org.eventb.core.guard#_NR1-0tJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c1∈dom(accept)" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NR1Xx9JDEeyk75c4Gf88Kw|org.eventb.core.guard#_NR3M8NJDEeyk75c4Gf88Kw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPVaccinationSystf-" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTHYPVaccinationSystf-(" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="rs1=accept(c1)" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NR1Xx9JDEeyk75c4Gf88Kw|org.eventb.core.guard#_NR3M8dJDEeyk75c4Gf88Kw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="UpdateAppointment/inv33/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTALLHYPVaccinationSystf."/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="appointment∪(centres × b)∈centres  booking" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqENJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NR3M8tJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqENJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poSequent#UpdateAppointment\/inv33\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="UpdateAppointment/inv34/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTALLHYPVaccinationSystf."/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(b × {t})∪bookingtime∈booking ↔ ℕ1" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqEdJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NR3M8tJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqEdJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poSequent#UpdateAppointment\/inv34\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTVaccinationSystf." org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+        <org.eventb.core.poIdentifier name="bookingtime'" org.eventb.core.type="ℙ(BOOKINGLIST×ℤ)"/>
+        <org.eventb.core.poIdentifier name="b" org.eventb.core.type="ℙ(BOOKINGLIST)"/>
+        <org.eventb.core.poIdentifier name="c" org.eventb.core.type="CENTRES"/>
+        <org.eventb.core.poIdentifier name="appointment'" org.eventb.core.type="ℙ(CENTRES×BOOKINGLIST)"/>
+        <org.eventb.core.poIdentifier name="t" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPVaccinationSystf." org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTIDENTVaccinationSystf." org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="b⊆booking" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NR3M8tJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NR3M9tJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c∈centres" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NR3M8tJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NR3M99JDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="t∈ℕ1" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NR3M8tJDEeyk75c4Gf88Kw|org.eventb.core.guard#_NR30ANJDEeyk75c4Gf88Kw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="AddCentre/inv33/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTALLHYPVaccinationSystf\/"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="appointment∪(centres × b)∈centres∪{c}  booking" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqENJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bYYYNI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NR30A9JDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqENJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poSequent#AddCentre\/inv33\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="AddCentre/inv35/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTALLHYPVaccinationSystf\/"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="accept∈citizens → centres∪{c}" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqEtJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bYYYNI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NR30A9JDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqEtJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poSequent#AddCentre\/inv35\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTVaccinationSystf/" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+        <org.eventb.core.poIdentifier name="b" org.eventb.core.type="ℙ(BOOKINGLIST)"/>
+        <org.eventb.core.poIdentifier name="centres'" org.eventb.core.type="ℙ(CENTRES)"/>
+        <org.eventb.core.poIdentifier name="c" org.eventb.core.type="CENTRES"/>
+        <org.eventb.core.poIdentifier name="belongs'" org.eventb.core.type="ℙ(CENTRES×VACCINES_BATCH)"/>
+        <org.eventb.core.poIdentifier name="appointment'" org.eventb.core.type="ℙ(CENTRES×BOOKINGLIST)"/>
+        <org.eventb.core.poIdentifier name="ba" org.eventb.core.type="VACCINES_BATCH"/>
+        <org.eventb.core.poIdentifier name="a" org.eventb.core.type="USERS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPVaccinationSystf/" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTIDENTVaccinationSystf\/" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="a∈adminstrators∩in" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bYYYNI-EeyEye5G0mBYwA|org.eventb.core.guard#_0baNktI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c∉centres" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bYYYNI-EeyEye5G0mBYwA|org.eventb.core.guard#_0baNk9I-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ba∈dom(batch)" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bYYYNI-EeyEye5G0mBYwA|org.eventb.core.guard#_0baNlNI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="ba∉ran(belongs)" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bYYYNI-EeyEye5G0mBYwA|org.eventb.core.guard#_0ba0oNI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="b⊆booking" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NR30A9JDEeyk75c4Gf88Kw|org.eventb.core.guard#_NR30BtJDEeyk75c4Gf88Kw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTVaccinationSystf0" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+        <org.eventb.core.poIdentifier name="c" org.eventb.core.type="CENTRES"/>
+        <org.eventb.core.poIdentifier name="belongs'" org.eventb.core.type="ℙ(CENTRES×VACCINES_BATCH)"/>
+        <org.eventb.core.poIdentifier name="ba" org.eventb.core.type="ℙ(VACCINES_BATCH)"/>
+        <org.eventb.core.poIdentifier name="a" org.eventb.core.type="USERS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPVaccinationSystf0" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTIDENTVaccinationSystf0" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="a∈adminstrators∩in" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0ba0o9I-EeyEye5G0mBYwA|org.eventb.core.guard#_0ba0p9I-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c∈centres" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0ba0o9I-EeyEye5G0mBYwA|org.eventb.core.guard#_0ba0qNI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ba⊆VACCINES_BATCH" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0ba0o9I-EeyEye5G0mBYwA|org.eventb.core.guard#_0bbbsNI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="ba⊆dom(batch)" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0ba0o9I-EeyEye5G0mBYwA|org.eventb.core.guard#_0bbbsdI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="ba∩ran(belongs)=(∅ ⦂ ℙ(VACCINES_BATCH))" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0ba0o9I-EeyEye5G0mBYwA|org.eventb.core.guard#_0bbbstI-EeyEye5G0mBYwA"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTVaccinationSystf1" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+        <org.eventb.core.poIdentifier name="br" org.eventb.core.type="BRAND"/>
+        <org.eventb.core.poIdentifier name="v" org.eventb.core.type="VACCINES"/>
+        <org.eventb.core.poIdentifier name="brand'" org.eventb.core.type="ℙ(VACCINES×BRAND)"/>
+        <org.eventb.core.poIdentifier name="ba" org.eventb.core.type="VACCINES_BATCH"/>
+        <org.eventb.core.poIdentifier name="batch'" org.eventb.core.type="ℙ(VACCINES_BATCH×VACCINES)"/>
+        <org.eventb.core.poIdentifier name="vaccines'" org.eventb.core.type="ℙ(VACCINES)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPVaccinationSystf1" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTIDENTVaccinationSystf1" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="v∉vaccines" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bbbtNI-EeyEye5G0mBYwA|org.eventb.core.guard#_0bcCwdI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ba∈VACCINES_BATCH" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bbbtNI-EeyEye5G0mBYwA|org.eventb.core.guard#_0bcCwtI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="br∈BRAND" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bbbtNI-EeyEye5G0mBYwA|org.eventb.core.guard#_0bcCw9I-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="ba∉dom(batch)" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bbbtNI-EeyEye5G0mBYwA|org.eventb.core.guard#_0bcCxNI-EeyEye5G0mBYwA"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="RegisterCitizen/inv32/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTALLHYPVaccinationSystf2"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="book∈booking → citizens∪{c}" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuDA9JDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bdQ4dI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NR4bENJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuDA9JDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poSequent#RegisterCitizen\/inv32\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="RegisterCitizen/inv35/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTALLHYPVaccinationSystf2"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="accept∈citizens∪{c} → centres" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqEtJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bdQ4dI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.event#_NR4bENJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqEtJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poSequent#RegisterCitizen\/inv35\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTVaccinationSystf2" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+        <org.eventb.core.poIdentifier name="account'" org.eventb.core.type="ℙ(USERS×PASSWORD)"/>
+        <org.eventb.core.poIdentifier name="nhs'" org.eventb.core.type="ℙ(NHS)"/>
+        <org.eventb.core.poIdentifier name="name'" org.eventb.core.type="ℙ(USERS×NAME)"/>
+        <org.eventb.core.poIdentifier name="n2" org.eventb.core.type="NHS"/>
+        <org.eventb.core.poIdentifier name="users'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="c" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="out'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="p" org.eventb.core.type="PASSWORD"/>
+        <org.eventb.core.poIdentifier name="n1" org.eventb.core.type="NAME"/>
+        <org.eventb.core.poIdentifier name="check'" org.eventb.core.type="ℙ(USERS×NHS)"/>
+        <org.eventb.core.poIdentifier name="certificates'" org.eventb.core.type="ℙ(USERS×ℤ)"/>
+        <org.eventb.core.poIdentifier name="citizens'" org.eventb.core.type="ℙ(USERS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPVaccinationSystf2" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTIDENTVaccinationSystf2" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∉users" org.eventb.core.source="/Coursework2/Users.bum|org.eventb.core.machineFile#Users|org.eventb.core.event#_7ngSxdI8EeyM6bBEKm0qeA|org.eventb.core.guard#_7ng50NI8EeyM6bBEKm0qeA"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="p∈PASSWORD" org.eventb.core.source="/Coursework2/Users.bum|org.eventb.core.machineFile#Users|org.eventb.core.event#_7ngSxdI8EeyM6bBEKm0qeA|org.eventb.core.guard#_7ng50dI8EeyM6bBEKm0qeA"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="n1∈NAME" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bdQ4dI-EeyEye5G0mBYwA|org.eventb.core.guard#_0bdQ5dI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="n2∈NHS ∖ nhs" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bdQ4dI-EeyEye5G0mBYwA|org.eventb.core.guard#_0bdQ5tI-EeyEye5G0mBYwA"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTVaccinationSystf3" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+        <org.eventb.core.poIdentifier name="rs" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="a" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="num" org.eventb.core.type="NHS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPVaccinationSystf3" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTIDENTVaccinationSystf3" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="a∈(adminstrators∪staff)∩in" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bd389I-EeyEye5G0mBYwA|org.eventb.core.guard#_0befA9I-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="num∈nhs" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bd389I-EeyEye5G0mBYwA|org.eventb.core.guard#_0befBNI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="rs=check∼(num)" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bd389I-EeyEye5G0mBYwA|org.eventb.core.guard#_0befBdI-EeyEye5G0mBYwA"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTVaccinationSystf4" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+        <org.eventb.core.poIdentifier name="lastVaccine'" org.eventb.core.type="ℙ(USERS×ℤ)"/>
+        <org.eventb.core.poIdentifier name="c1" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="belongs'" org.eventb.core.type="ℙ(CENTRES×VACCINES_BATCH)"/>
+        <org.eventb.core.poIdentifier name="c2" org.eventb.core.type="CENTRES"/>
+        <org.eventb.core.poIdentifier name="v1" org.eventb.core.type="VACCINES_BATCH"/>
+        <org.eventb.core.poIdentifier name="a" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="t" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="certificates'" org.eventb.core.type="ℙ(USERS×ℤ)"/>
+        <org.eventb.core.poIdentifier name="recording'" org.eventb.core.type="ℙ(USERS×VACCINES_BATCH)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPVaccinationSystf4" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTIDENTVaccinationSystf4" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="a∈(adminstrators∪staff)∩in" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bfGENI-EeyEye5G0mBYwA|org.eventb.core.guard#_0bfGFtI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c1∈citizens" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bfGENI-EeyEye5G0mBYwA|org.eventb.core.guard#_0bfGF9I-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="c2∈centres" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bfGENI-EeyEye5G0mBYwA|org.eventb.core.guard#_0bfGGNI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="v1∈VACCINES_BATCH" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bfGENI-EeyEye5G0mBYwA|org.eventb.core.guard#_0bfGGdI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="t∈date" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bfGENI-EeyEye5G0mBYwA|org.eventb.core.guard#_0bfGGtI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="{c2 ↦ v1}⊂belongs" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bfGENI-EeyEye5G0mBYwA|org.eventb.core.guard#_0bgUMNI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="certificates(c1)+1≤3" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0bfGENI-EeyEye5G0mBYwA|org.eventb.core.guard#_0brTUNI-EeyEye5G0mBYwA"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTVaccinationSystf5" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+        <org.eventb.core.poIdentifier name="rs1" org.eventb.core.type="ℙ(VACCINES_BATCH)"/>
+        <org.eventb.core.poIdentifier name="c" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="rs2" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPVaccinationSystf5" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTIDENTVaccinationSystf5" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈citizens∩in" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0btIgNI-EeyEye5G0mBYwA|org.eventb.core.guard#_0btIhNI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="rs1=recording[{c}]" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0btIgNI-EeyEye5G0mBYwA|org.eventb.core.guard#_0btIhdI-EeyEye5G0mBYwA"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="rs2=certificates(c)" org.eventb.core.source="/Coursework2/VaccinationCentre.bum|org.eventb.core.machineFile#VaccinationCentre|org.eventb.core.event#_0btIgNI-EeyEye5G0mBYwA|org.eventb.core.guard#_0btIhtI-EeyEye5G0mBYwA"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTVaccinationSystf6" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+        <org.eventb.core.poIdentifier name="account'" org.eventb.core.type="ℙ(USERS×PASSWORD)"/>
+        <org.eventb.core.poIdentifier name="users'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="out'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="staff'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="s" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="a1" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="p" org.eventb.core.type="PASSWORD"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPVaccinationSystf6" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTIDENTVaccinationSystf6" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="a1∈adminstrators∩in" org.eventb.core.source="/Coursework2/Users.bum|org.eventb.core.machineFile#Users|org.eventb.core.event#_7nhg4dI8EeyM6bBEKm0qeA|org.eventb.core.guard#_7nhg5dI8EeyM6bBEKm0qeA"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="s∈USERS ∖ users" org.eventb.core.source="/Coursework2/Users.bum|org.eventb.core.machineFile#Users|org.eventb.core.event#_7nhg4dI8EeyM6bBEKm0qeA|org.eventb.core.guard#_7nhg5tI8EeyM6bBEKm0qeA"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="p∈PASSWORD" org.eventb.core.source="/Coursework2/Users.bum|org.eventb.core.machineFile#Users|org.eventb.core.event#_7nhg4dI8EeyM6bBEKm0qeA|org.eventb.core.guard#_7nhg59I8EeyM6bBEKm0qeA"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTVaccinationSystf7" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+        <org.eventb.core.poIdentifier name="adminstrators'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="a2" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="account'" org.eventb.core.type="ℙ(USERS×PASSWORD)"/>
+        <org.eventb.core.poIdentifier name="users'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="out'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="a1" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="p" org.eventb.core.type="PASSWORD"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPVaccinationSystf7" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTIDENTVaccinationSystf7" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="a1∈adminstrators∩in" org.eventb.core.source="/Coursework2/Users.bum|org.eventb.core.machineFile#Users|org.eventb.core.event#_7nhg7NI8EeyM6bBEKm0qeA|org.eventb.core.guard#_7niH8tI8EeyM6bBEKm0qeA"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="a2∈USERS ∖ users" org.eventb.core.source="/Coursework2/Users.bum|org.eventb.core.machineFile#Users|org.eventb.core.event#_7nhg7NI8EeyM6bBEKm0qeA|org.eventb.core.guard#_7niH89I8EeyM6bBEKm0qeA"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="p∈PASSWORD" org.eventb.core.source="/Coursework2/Users.bum|org.eventb.core.machineFile#Users|org.eventb.core.event#_7nhg7NI8EeyM6bBEKm0qeA|org.eventb.core.guard#_7niH9NI8EeyM6bBEKm0qeA"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTVaccinationSystf8" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+        <org.eventb.core.poIdentifier name="u" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="in'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="out'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="p" org.eventb.core.type="PASSWORD"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPVaccinationSystf8" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTIDENTVaccinationSystf8" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="u∈users" org.eventb.core.source="/Coursework2/Users.bum|org.eventb.core.machineFile#Users|org.eventb.core.event#_7nfEo9I8EeyM6bBEKm0qeA|org.eventb.core.guard#_7nfEptI8EeyM6bBEKm0qeA"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="u∉in" org.eventb.core.source="/Coursework2/Users.bum|org.eventb.core.machineFile#Users|org.eventb.core.event#_7nfEo9I8EeyM6bBEKm0qeA|org.eventb.core.guard#_7nfrsNI8EeyM6bBEKm0qeA"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="p∈PASSWORD" org.eventb.core.source="/Coursework2/Users.bum|org.eventb.core.machineFile#Users|org.eventb.core.event#_7nfEo9I8EeyM6bBEKm0qeA|org.eventb.core.guard#_7nfrsdI8EeyM6bBEKm0qeA"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="account(u)=p" org.eventb.core.source="/Coursework2/Users.bum|org.eventb.core.machineFile#Users|org.eventb.core.event#_7nfEo9I8EeyM6bBEKm0qeA|org.eventb.core.guard#_7nfrstI8EeyM6bBEKm0qeA"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTVaccinationSystf9" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+        <org.eventb.core.poIdentifier name="in'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="out'" org.eventb.core.type="ℙ(USERS)"/>
+        <org.eventb.core.poIdentifier name="s" org.eventb.core.type="USERS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPVaccinationSystf9" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTIDENTVaccinationSystf9" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="s∈in" org.eventb.core.source="/Coursework2/Users.bum|org.eventb.core.machineFile#Users|org.eventb.core.event#_7nfrtdI8EeyM6bBEKm0qeA|org.eventb.core.guard#_7nfrt9I8EeyM6bBEKm0qeA"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTVaccinationSystf:" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+        <org.eventb.core.poIdentifier name="account'" org.eventb.core.type="ℙ(USERS×PASSWORD)"/>
+        <org.eventb.core.poIdentifier name="u" org.eventb.core.type="USERS"/>
+        <org.eventb.core.poIdentifier name="p" org.eventb.core.type="PASSWORD"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPVaccinationSystf:" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#EVTIDENTVaccinationSystf:" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="u∈users" org.eventb.core.source="/Coursework2/Users.bum|org.eventb.core.machineFile#Users|org.eventb.core.event#_7nfrutI8EeyM6bBEKm0qeA|org.eventb.core.guard#_7ngSwdI8EeyM6bBEKm0qeA"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="p∈PASSWORD" org.eventb.core.source="/Coursework2/Users.bum|org.eventb.core.machineFile#Users|org.eventb.core.event#_7nfrutI8EeyM6bBEKm0qeA|org.eventb.core.guard#_7ngSwtI8EeyM6bBEKm0qeA"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="account(u)≠p" org.eventb.core.source="/Coursework2/Users.bum|org.eventb.core.machineFile#Users|org.eventb.core.event#_7nfrutI8EeyM6bBEKm0qeA|org.eventb.core.guard#_7ngSw9I8EeyM6bBEKm0qeA"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Coursework2/Booking.bpo|org.eventb.core.poFile#Booking|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="10">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="booking⊆BOOKINGLIST" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuDAtJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="book∈booking → citizens" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuDA9JDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="appointment∈centres  booking" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqENJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="bookingtime∈booking ↔ ℕ1" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqEdJDEeyk75c4Gf88Kw"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="accept∈citizens → centres" org.eventb.core.source="/Coursework2/Booking.bum|org.eventb.core.machineFile#Booking|org.eventb.core.invariant#_NRuqEtJDEeyk75c4Gf88Kw"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

@@ -1,0 +1,10 @@
+context VaccinationSystem
+sets
+CENTRES // Sets of vaccination centres
+BRAND//BRAND
+VACCINES_BATCH	// The set of vaccines  numbers
+VACCINES
+
+NAME
+NHS
+end

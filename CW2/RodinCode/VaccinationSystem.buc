@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xcontext.base" org.eventb.core.generated="false" version="3">
+    <org.eventb.core.carrierSet name="_rambwNI7EeyM6bBEKm0qeA" org.eventb.core.generated="false" org.eventb.core.identifier="CENTRES"/>
+    <org.eventb.core.carrierSet name="_ranC0NI7EeyM6bBEKm0qeA" org.eventb.core.generated="false" org.eventb.core.identifier="BRAND"/>
+    <org.eventb.core.carrierSet name="_ranC0dI7EeyM6bBEKm0qeA" org.eventb.core.generated="false" org.eventb.core.identifier="VACCINES_BATCH"/>
+    <org.eventb.core.carrierSet name="_ranC0tI7EeyM6bBEKm0qeA" org.eventb.core.generated="false" org.eventb.core.identifier="VACCINES"/>
+    <org.eventb.core.carrierSet name="_ranC09I7EeyM6bBEKm0qeA" org.eventb.core.generated="false" org.eventb.core.identifier="NAME"/>
+    <org.eventb.core.carrierSet name="_ranC1NI7EeyM6bBEKm0qeA" org.eventb.core.generated="false" org.eventb.core.identifier="NHS"/>
+</org.eventb.core.contextFile>

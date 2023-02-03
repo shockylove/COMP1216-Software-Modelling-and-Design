@@ -1,0 +1,5 @@
+context BookingSystem
+extends VaccinationSystem
+sets 
+BOOKINGLIST
+end

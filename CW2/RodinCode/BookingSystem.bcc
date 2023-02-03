@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xcontext.base">
+    <org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/Coursework2/VaccinationSystem.bcc|org.eventb.core.scContextFile#VaccinationSystem" org.eventb.core.source="/Coursework2/BookingSystem.buc|org.eventb.core.contextFile#BookingSystem|org.eventb.core.extendsContext#_rawMwNI7EeyM6bBEKm0qeA"/>
+    <org.eventb.core.scInternalContext name="VaccinationSystem">
+        <org.eventb.core.scCarrierSet name="BRAND" org.eventb.core.source="/Coursework2/VaccinationSystem.buc|org.eventb.core.contextFile#VaccinationSystem|org.eventb.core.carrierSet#_ranC0NI7EeyM6bBEKm0qeA" org.eventb.core.type="ℙ(BRAND)"/>
+        <org.eventb.core.scCarrierSet name="VACCINES" org.eventb.core.source="/Coursework2/VaccinationSystem.buc|org.eventb.core.contextFile#VaccinationSystem|org.eventb.core.carrierSet#_ranC0tI7EeyM6bBEKm0qeA" org.eventb.core.type="ℙ(VACCINES)"/>
+        <org.eventb.core.scCarrierSet name="NAME" org.eventb.core.source="/Coursework2/VaccinationSystem.buc|org.eventb.core.contextFile#VaccinationSystem|org.eventb.core.carrierSet#_ranC09I7EeyM6bBEKm0qeA" org.eventb.core.type="ℙ(NAME)"/>
+        <org.eventb.core.scCarrierSet name="CENTRES" org.eventb.core.source="/Coursework2/VaccinationSystem.buc|org.eventb.core.contextFile#VaccinationSystem|org.eventb.core.carrierSet#_rambwNI7EeyM6bBEKm0qeA" org.eventb.core.type="ℙ(CENTRES)"/>
+        <org.eventb.core.scCarrierSet name="VACCINES_BATCH" org.eventb.core.source="/Coursework2/VaccinationSystem.buc|org.eventb.core.contextFile#VaccinationSystem|org.eventb.core.carrierSet#_ranC0dI7EeyM6bBEKm0qeA" org.eventb.core.type="ℙ(VACCINES_BATCH)"/>
+        <org.eventb.core.scCarrierSet name="NHS" org.eventb.core.source="/Coursework2/VaccinationSystem.buc|org.eventb.core.contextFile#VaccinationSystem|org.eventb.core.carrierSet#_ranC1NI7EeyM6bBEKm0qeA" org.eventb.core.type="ℙ(NHS)"/>
+    </org.eventb.core.scInternalContext>
+    <org.eventb.core.scCarrierSet name="BOOKINGLIST" org.eventb.core.source="/Coursework2/BookingSystem.buc|org.eventb.core.contextFile#BookingSystem|org.eventb.core.carrierSet#_rawz0NI7EeyM6bBEKm0qeA" org.eventb.core.type="ℙ(BOOKINGLIST)"/>
+</org.eventb.core.scContextFile>

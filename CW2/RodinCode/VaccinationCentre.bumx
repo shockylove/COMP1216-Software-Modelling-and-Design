@@ -1,0 +1,155 @@
+machine VaccinationCentre
+refines Users
+sees VaccinationSystem UserSystem 
+variables 
+	users in out account adminstrators staff citizens
+	date
+	nhs // sets of existing NHS number
+	name//name of citizen
+	check // Each citizne has unique nhs 
+	recording//recording of vaccines 
+	certificates // total recieved vaccines times
+	lastVaccine //last time get vaccine
+	
+	centres //Existing centres
+	vaccines //Sets of vaccines
+	brand// relation of brands and vaccine
+	batch// relation of vaccin and its batch
+	belongs	// All the centres have vaccines(at least 1)
+invariants
+		@inv10: date ⊆ ℕ1
+		@inv11: name ∈ citizens → NAME
+		@inv12: nhs ⊆ NHS
+		@inv13: check ∈  citizens ⤖ nhs 
+		@inv14: recording ∈ citizens ↔ VACCINES_BATCH	//recording of vaccine
+		@inv15: certificates ∈ citizens → ℤ //numbers of vaccines had
+		@inv16: lastVaccine ∈ citizens ⇸ date	//partiacal
+		
+		@inv99: vaccines ⊆ VACCINES
+		@inv17: centres ⊆ CENTRES
+		@inv18: brand ∈ vaccines → BRAND
+		@inv19: belongs ∈ centres ↔  VACCINES_BATCH	//relation, a centre may runs out of stock
+		@inv20: batch ∈  VACCINES_BATCH ⤀ vaccines //vaccines has 1 exaclty batch
+		
+		@grd1: ∀c·c ∈ citizens ⇒ certificates(c) ≤ 3
+events
+	event INITIALISATION extends INITIALISATION
+	then
+		@act6: name,nhs,recording,certificates,lastVaccine,check ≔ ∅,∅,∅,∅,∅,∅
+		@act7: date ≔ ∅
+		@act8: vaccines,centres,belongs,brand,batch ≔ ∅,∅,∅,∅,∅
+	end
+	
+	/*
+	 * A centre must be added by a administrator
+	 */
+	event AddCentre	
+	any a c ba where
+		@grd1: a ∈ adminstrators ∩ in
+		@grd2: c ∉ centres
+		@grd3: ba ∈ dom(batch) //@ba is existing vaccine number
+		@grd4: ba ∉ ran(belongs) //@ba has not in any centre
+	then
+		@act1: centres ≔ centres ∪ {c}
+		@act2: belongs(c) ≔ ba
+	end
+	
+	/*
+	 * A stock must be added by a administrator
+	 */
+	event UpdateStock	
+	any a c ba  where
+		@grd1: a ∈ adminstrators ∩ in
+		@grd2: c ∈ centres
+		@grd3: ba ⊆ VACCINES_BATCH
+		@grd4: ba ⊆ dom(batch) //@ba is existing vaccine number
+		@grd5: ba ∩ ran(belongs) = ∅ //@ba has not in any centre
+	then
+		@act1: belongs ≔ belongs ∪ ({c} × ba ) //overradding
+	end
+	
+	/*
+	 * Add new vaccine with its batch
+	 */
+	event NewVaccine//matching vaccine and batch
+	any ba v br where
+		@grd1: v ∉  vaccines
+		@grd2: ba ∈ VACCINES_BATCH
+		@grd3: br ∈ BRAND
+		@grd4: ba ∉ dom(batch)
+	then 
+		@act1: vaccines ≔ vaccines ∪ {v}
+		@act2: brand(v) ≔ br
+		@act3: batch(ba) ≔ v
+	end
+
+/*
+ * Extend RegisterCitizen:
+ * a citizen must has a name and its nhs number
+ */
+	event RegisterCitizen extends RegisterCitizen//to bind name&NHS 
+	any n1 n2 where
+		@grd3: n1 ∈ NAME
+		@grd4: n2 ∈ NHS ∖ nhs
+	then
+		@act5: nhs ≔ nhs ∪ {n2}
+		@act6: check(c) ≔ n2
+		@act7: name(c) ≔ n1
+		@act8: certificates(c) ≔ 0
+		end
+	
+	/**
+	 * An adiministrator or staff could view his detail
+	 */
+	event ViewCitizenDetail
+	any a num rs where
+		@grd1: a ∈ (adminstrators ∪ staff) ∩ in 
+		@grd2: num ∈ nhs
+		@grd3: rs = check∼(num) //get citizen details by @num
+	end
+	
+	/* An adiministrator or staff could update the citizen's certificates,
+	 * and change the stock 
+	 * */
+	event UpdateCertificates
+	any a c1 c2 v1 t where
+		@grd1: a ∈ (adminstrators ∪ staff) ∩ in 
+		@grd2: c1 ∈ citizens
+		@grd3: c2 ∈ centres
+		@grd4: v1 ∈ VACCINES_BATCH
+		@grd5: t ∈ date
+		@grd7: {c2 ↦ v1 } ⊂ belongs	//vaccine is in @c2 center
+		@grd8: certificates(c1) + 1 ≤ 3
+	then
+		@act1: recording ≔ {c1 ↦ v1} ∪ recording
+		@act2: lastVaccine(c1) ≔ t
+		@act3: certificates(c1) ≔ certificates(c1) +1
+		@act4: belongs ≔  belongs ⩥ {v1}
+	end
+	
+	/**
+	 * An citizen could view own detail
+	 */
+	event ViewMyCertificates
+	any c rs1 rs2 where
+		@grd1: c ∈ citizens ∩ in
+		@grd2: rs1 = recording[{c}] // return the recoding of @c
+		@grd3: rs2 = certificates(c)
+	end
+
+	event RegisterStaff extends RegisterStaff
+	end
+
+	event RegisterAd extends RegisterAd
+	end
+
+	event Login extends Login
+	end
+
+	event Logout extends Logout
+	end
+
+	event ChangePassword extends ChangePassword
+	end
+
+end

@@ -1,0 +1,161 @@
+machine Booking
+refines VaccinationCentre
+sees BookingSystem UserSystem
+variables
+	users
+	in
+	out
+	account
+	adminstrators
+	staff
+	citizens
+	date
+	nhs
+	name
+	check
+	recording
+	certificates
+	lastVaccine
+	centres
+	vaccines
+	brand
+	batch
+	belongs
+	
+	booking 	// recorgin fo booking
+	book//the book process of citizens
+	appointment//the centres is avialbe for booking
+	bookingtime//availbe time for booking
+	accept//the citizen accept the booking and its centres
+invariants
+	@inv31: booking ⊆ BOOKINGLIST
+	@inv32: book ∈ booking → citizens //citizen could have a booking 
+	@inv33: appointment ∈ centres  booking
+	@inv34: bookingtime ∈ booking ↔ ℕ1
+	@inv35: accept ∈ citizens → centres
+events
+	event INITIALISATION extends INITIALISATION
+	then
+		@act31: booking,book,appointment,bookingtime,accept ≔ ∅,∅,∅,∅,∅
+	end
+	
+	/* 
+	 * To create a booking process
+	 * a citizen will be given a availbe booking,
+	 * containg center time booking.
+	 * 
+	 * */
+	event NewBooking
+	any c1 c2 b t where
+		@grd1: c1 ∈ citizens
+		@grd2: c2 ∈ centres
+		@grd3: b ∈ booking
+		@grd4: t ∈ ℕ1
+		@grd5: (c2 ↦ b) ∈ appointment
+		@grd6: (b ↦ t) ∈ bookingtime
+		@grd7: certificates(c1) ≤ 3
+		@grd8: t − lastVaccine(c1) ≥ 28
+	then
+		@act1: book(b) ≔ c1
+	end
+	
+	/*A citizen accept the booking, and he or she will be turn in the recoring of which centre */
+	event CitizenAcceptBooking
+	any b c1 c2 where
+		@grd1: b ∈ booking
+		@grd2: c2 ∈ centres
+		@grd3: c1 ∈ citizens
+		@grd5: (c2 ↦ b) ∈ appointment
+		@grd6: accept(c1) ≠ c2
+	then
+		@act1: accept(c1) ≔ c2
+	end
+	
+	/* A citizen could reject booking and he or she would be given an new booking*/
+ event CitizenRejectBooking
+ any b c1 c2  b3 c3 where
+  	@grd1: b ∈ booking
+	@grd2: c2 ∈ centres
+	@grd3: c1 ∈ citizens
+	@grd5: (c2 ↦ b) ∈ appointment
+	@grd6: accept(c1) ≠ c2
+	@grd7: b3 ∈ dom(bookingtime)
+	@grd9: (c3 ↦ b3) ∉ appointment
+	@grd10: book(b) = c1
+ then
+ 	@act1: book ≔ book ⩥ {c1}
+ 	@act2: appointment ≔ appointment ∪ ({c3 }× {b3})
+ 	@act3: book(b3) ≔ c1
+ end
+
+/* Citizen terminate booking process, and would be out of the booking process */
+	event CitizenTerminateABooking
+	any c1 b c2 where
+		@grd1: c1 ∈ citizens
+		@grd2: (b ↦ c1 ) ∈ book
+		@grd3: (c1 ↦ c2) ∈ accept
+	then
+		@act1: book ≔ book ⩥ {c1}
+		@act2: accept ≔{c1} ⩤  accept
+	end
+	
+	/** Return which centre he is in */
+	event ViewCurrentBooking
+	any c1  rs1  where
+		@grd1: c1 ∈ citizens
+		@grd2: c1 ∈ dom(accept)
+		@grd3: rs1 = accept(c1)
+	end
+	
+	/** Adding the appointment with availble dates and centres*/
+	event UpdateAppointment
+	any b c t where
+		@grd1: b ⊆ booking
+		@grd2: c ∈ centres
+		@grd3: t ∈ ℕ1
+	then
+		@act1: appointment ≔ appointment ∪ (centres × b)
+		@act2: bookingtime ≔ (b × {t} )∪ bookingtime
+	end
+
+	event AddCentre extends AddCentre
+	any b where
+		@grd31: b ⊆ booking
+	then
+		@act31: appointment ≔ appointment ∪ (centres × b)
+	end
+
+	event UpdateStock extends UpdateStock
+	end
+
+	event NewVaccine extends NewVaccine
+	end
+
+	event RegisterCitizen extends RegisterCitizen
+	end
+
+	event ViewCitizenDetail extends ViewCitizenDetail
+	end
+
+	event UpdateCertificates extends UpdateCertificates
+	end
+
+	event ViewMyCertificates extends ViewMyCertificates
+	end
+
+	event RegisterStaff extends RegisterStaff
+	end
+
+	event RegisterAd extends RegisterAd
+	end
+
+	event Login extends Login
+	end
+
+	event Logout extends Logout
+	end
+
+	event ChangePassword extends ChangePassword
+	end
+
+end
